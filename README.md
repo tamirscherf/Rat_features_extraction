@@ -24,6 +24,7 @@ Resulets: contains the validations of the network and video results on raw data.
 Predicte: predicting using two networks. More information below.
 
 ------------------ Using two nets for Minimizing running time of prediction ---------------------------------
+
 Minimizing the running time of the prediction of the net had great importance to the project. Therefore I dropped the input image size from 200X200 pixels to 100X100 and afterwards to 50X50. While net performance on most of the 50X50 images were good, for a few images of a certain behavior of the rat, the 50X50 resolution was too low causing bad results. I implemented a function that can detect those parts where the 50X50 net fails (based on the variance of the first derivative of the net output), and used a 100X100 net only for predicting those “hard” parts.
 This manipulation improved the prediction running time and accuracy. 
 
