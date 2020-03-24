@@ -5,6 +5,8 @@ The images are frames taken out of a video of the rat. I used two net architectu
 Due to the fact that the nets output is cyclic (an angle between 0 to 359), I had to write a new regression layer and a corresponding loss function.
 I will only include here the main code files in order to presentes the main ideas in the project. The project was written in Matlab due to the lab requirement.
 
+![](visiualization/head_body_angles.png)
+
 Train_net: This folder contains the functions for training nets and validating them.
 
 Data_preparetion: Contains a function for augmentation of the data.
