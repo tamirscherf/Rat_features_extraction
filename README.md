@@ -13,6 +13,9 @@ Above is an input image with the arrows based on the outputs - head and body ang
 
 This graph shows the difference between predictions over tags of a 100 images untrained validation set.
 
+------------------ Folders ---------------------------------
+#Folders
+
 Train_net: This folder contains the functions for training nets and validating them.
 
 Data_preparetion: Contains a function for augmentation of the data.
