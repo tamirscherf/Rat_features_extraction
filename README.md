@@ -29,8 +29,13 @@ This manipulation improved the prediction running time and accuracy.
 
 -------------------------------------------------------------------------------------------------------------
 
------------------- Cyclic regrassion layer ---------------------------------
- 
+------------------ Cyclic regrassion layer ------------------------------------------------------------------
+Because of the cyclic output and due to the fact there were not any built in loss function for this output, I implement a squared loss function and its derivative for the regression layer. Deriving the squared distance between tags (T) and predictions (Y) required the subtraction function
+Y - T. Due to cyclicality it is not trivial and the sign of this function is case dependent.
+
+![](visualization/Cyclic_loss_derivative_cases.png)
+
+This tree shows the sepration into cases.
 
 -------------------------------------------------------------------------------------------------------------
 
