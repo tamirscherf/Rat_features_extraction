@@ -14,5 +14,5 @@ Hard image / Normal image, a binary tag, was taken for future use.
 
 As can be seen in this example of the tagger, the frame is tagged by choosing the tail base, neck base and nose points.
 Each frame that is being tagged is shown together with 5 frames before and 5 frames after in order to help the person who is tagging make 
-the most accurate tag. In addition, the tagger allows changing the brightness of the frame for more accurate results. 
+the most accurate tag. For the same reason, the tagger supports changing the frame brightness.
 
