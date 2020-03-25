@@ -3,7 +3,8 @@ Body Angle, calculated as the angle between the tale base and neck base with res
 Head Angle, calculated similarly with neck base and nose.
 Hard image / Normal image, a binary tag, was taken for future use.
 
-![](My_Code/visualization/Tagger.png)
+
+![](visualization/Tagger.png)
 
 
 As can be seen in this example of the tagger, the frame is tagged by choosing the tail base, neck base and nose points.
