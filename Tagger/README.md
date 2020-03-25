@@ -4,7 +4,7 @@ Head Angle, calculated similarly with neck base and nose.
 Hard image / Normal image, a binary tag, was taken for future use.
 
 
-![](visualization/Tagger.png)
+![](Tagger/Tagger.png)
 
 
 As can be seen in this example of the tagger, the frame is tagged by choosing the tail base, neck base and nose points.
