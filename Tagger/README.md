@@ -1,6 +1,11 @@
+I received frames out of a video of a rat in an arena. Tagging those frames was required. I implemented a GUI using matlab tools. From each frame the next information was extracted: 
+
 Location (X,Y) of the tail base, neck base and nose.
+
 Body Angle, calculated as the angle between the tale base and neck base with respect to the horizontal axis.
+
 Head Angle, calculated similarly with neck base and nose.
+
 Hard image / Normal image, a binary tag, was taken for future use.
 
 
