@@ -9,7 +9,7 @@ I will only include here the main code files in order to presentes the main idea
 
 Above is an input image with the arrows based on the outputs - head and body angles.
 
-![](visualization/Linear_loss_graph.png)
+![](visualization/Body_Angle_Linear_Loss_Validation_Graph.png)
 
 This graph shows the difference between predictions over tags of a 100 images untrained validation set.
 
