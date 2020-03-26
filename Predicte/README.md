@@ -3,6 +3,7 @@ This function uses two nets in order to predict the body / head angle.
 While training nets on 50X50 images I found that the nets perform badly on certain images(An example is found in the “Bad_performence” video file).
 The behavior of the rat in those images are grooming behaviors, as can be seen in the next image. 
 
+![](Predicte/Grooming_behavior.png)
 
 It is not so clear what are the exact angles, even to the human eye. The yellow arrows indicate the wide range that can be relevant for the body angle.
 
