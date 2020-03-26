@@ -7,7 +7,7 @@ I will only include here the main code files in order to presentes the main idea
 
 ![](visualization/head_body_angles.png)
 
-Above is an input image with the arrows based on the outputs - head and body angles. A monitoring device is attached to the rats head, what makes the recognition task less trivial.
+Above is an input image with the arrows based on the outputs - head and body angles. A brain monitoring device is attached to the rats head, what makes the recognition task less trivial.
 
 ![](visualization/Body_Angle_Linear_Loss_Validation_Graph.png)
 
