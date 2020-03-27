@@ -8,3 +8,8 @@ The main branch of the net contains 5 sections for a net works on 50x50 images, 
 ### Custom
 The custom architectures that were tested contained the same initial and last sections as the ResNet, and between 6 to 10 sections of convolutional units. Each unit contains a pooling layer, convolution layer, normalization layer and activation layer, using both max and average pooling.
 
+
+![](Train_progress_ResNet.png)
+
+
+![](MainNet_Architecture.png)
