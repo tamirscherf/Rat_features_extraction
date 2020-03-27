@@ -29,6 +29,8 @@ Final_test error: a set of 100 tag images that is not part of the DB that the tr
 Those 100 frames are taken from a different video in order to see how well the net performs on a video that it has never learned any
 frame from. 
 
+![](Final_test_validation_graph.png)
+
 Un-tagged data: a prediction of the net over 42000 frames, from a 15 second long video. Those frames are combined again for a video,
-together with an arrow visualizing the predictions of the net. This video also gives a good validation about the net performance with
-frames from video that it did learn from before.  
+together with an arrow visualizing the predictions of the net(see an example in file "Validation_video.mp4"). This video also gives a
+good validation about the net performance with frames from video that it did learn from before.  
