@@ -1,4 +1,6 @@
-Each image was augmented by a 64 factor with the next methods:
+16 videos were sampled for the DB, 100 frames were tagged from each. Augmenting with a 64 factor gave a data set of 102400(16x100x64).
+
+Each image was augmented with the next methods:
 
 Rotation by 90 degrees. X4
 
