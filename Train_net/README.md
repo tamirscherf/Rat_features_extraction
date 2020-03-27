@@ -20,10 +20,17 @@ The custom architectures that were tested contained the same initial and last se
 ## Validation
 
 Each network that has been trained was validated by a few parameters.
+
 Validation error: regular validation set sampled randomly from the DB, 20%.
+
 Final_test error: a set of 100 tag images that is not part of the DB that the training and validation set are taken from.
+
 Those 100 frames are taken from a different video in order to see how well the net performs on a video that it has never learned any
+
 frame from. 
+
 Un-tagged data: a prediction of the net over 42000 frames, from a 15 second long video. Those frames are combined again for a video,
+
 together with an arrow visualizing the predictions of the net. This video gives a good validation about the net performance with frames
+
 from video that it did learn from before.  
