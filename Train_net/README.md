@@ -23,7 +23,7 @@ Each network that has been trained was validated by a few parameters.
 
 Validation error: a validation set sampled randomly from the DB, 20% of the DB.
 
-![](Body_Angle_Linear_Loss_Validation_Graph.png = 250X250)
+![](Body_Angle_Linear_Loss_Validation_Graph.png)
 
 Final_test error: a set of 100 tag images that is not part of the DB that the training and validation set are taken from.
 Those 100 frames are taken from a different video in order to see how well the net performs on a video that it has never learned any
