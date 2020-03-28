@@ -12,12 +12,10 @@ The custom architectures that were tested contained the same initial and last se
 #### One of the ResNet's training prograss
 
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Train_progress_ResNet.png">
-![](Train_progress_ResNet.png)
 
 #### The MainNet's Architecture
 
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/MainNet_Architecture.png">
-![](MainNet_Architecture.png)
 
 The MainNet width is 24.
 
@@ -29,7 +27,6 @@ Each network that has been trained was validated by a few parameters.
 Regular validiation. A validation set sampled randomly from the DB, 20% of the DB.
 
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Body_Angle_Linear_Loss_Validation_Graph.png">
-![](Body_Angle_Linear_Loss_Validation_Graph.png)
 
 #### Frames from outside of the DB
 a set of 100 tagged images that is not part of the DB that the training and validation sets are taken from.
@@ -37,7 +34,6 @@ Those 100 frames are taken from a different video in order to see how well the n
 frame from. 
 
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Final_test_validation_graph.png">
-![](Final_test_validation_graph.png)
 
 #### Video of un-tagged data
 a prediction of the net over 42000 frames, from a 15 second long video. Those frames are combined again for a video,
