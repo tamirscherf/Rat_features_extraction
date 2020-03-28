@@ -47,7 +47,7 @@ those validations of it in a unique folder.
 
 ### F_One_regression_layer.m
 Because of the cyclic output and due to the fact there were not any built in loss function for this output, I implement a squared loss
-function and its derivative for the regression layer. Deriving the squared distance between tags (T) and predictions (Y) required the
+function and its derivative for the regression layer(the layer is named f1). Deriving the squared distance between tags (T) and predictions (Y) required the
 subtraction function Y - T. Due to cyclicality it is not trivial and the sign of this function is case dependent.
 
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Cyclic_loss_derivative_cases.png">
