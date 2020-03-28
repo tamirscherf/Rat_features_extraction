@@ -185,16 +185,6 @@ function diff_level_Callback(hObject, eventdata, handles)
     diffLevel = 1;
 end
 
-function figure1_KeyPressFcn(hObject, eventdata, handles)
-%set the difficulty level of the image to hard.
-    global diffLevel;
-    keyPressed = eventdata.Key;
-    if strcmpi(keyPressed,'x')
-        diffLevel = 1;
-        disp("HERERERERERE");
-    end
-end
-
 function normal_diff_level_Callback(hObject, eventdata, handles)
 %set the difficulty level of the image to normal.
     global diffLevel;
