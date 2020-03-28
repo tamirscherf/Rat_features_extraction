@@ -11,7 +11,7 @@ Above is an input image with the arrows based on the outputs - head and body ang
 
 ![](visualization/Body_Angle_Linear_Loss_Validation_Graph.png)
 
-This graph shows the difference between predictions over tags of a validation set.
+This graph shows the difference between tags and predictions of the validation set.
 
 ## Folders
 
