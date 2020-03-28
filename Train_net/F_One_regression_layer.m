@@ -1,6 +1,6 @@
 classdef F_One_regression_layer < nnet.layer.RegressionLayer
         %Regression layer for cyclic output, angle between 0 to 359.
-        %Squerd loss.
+        %Squared loss function.
     properties
         % (Optional) Layer properties.
     end
@@ -17,8 +17,8 @@ classdef F_One_regression_layer < nnet.layer.RegressionLayer
             %
             % Inputs:
             %         layer - Output layer
-            %         Y     – Predictions made by network
-            %         T     – Training 
+            %         Y     â€“ Predictions made by network
+            %         T     â€“ Training 
             %
             % Output:
             %         loss  - Loss between Y and T
@@ -42,8 +42,8 @@ classdef F_One_regression_layer < nnet.layer.RegressionLayer
             %
             % Inputs:
             %         layer - Output layer
-            %         Y     – Predictions made by network
-            %         T     – Training 
+            %         Y     â€“ Predictions made by network
+            %         T     â€“ Training 
             %
             % Output:
             %         dLdY  - Derivative of the loss with respect to the predictions Y        
