@@ -9,7 +9,7 @@ I will only include here the main code files in order to presentes the main idea
 
 Above is an input image with the arrows based on the outputs - head and body angles. A brain monitoring device is attached to the rats head, what makes the recognition task less trivial.
 
-<img src = "https://github.com/tamirscherf/My_Code/blob/master/visualization/Body_Angle_Linear_Loss_Validation_Graph.png" width = "512" height = "256">
+<img src = "https://github.com/tamirscherf/My_Code/blob/master/visualization/Body_Angle_Linear_Loss_Validation_Graph.png" width = "640" height = "480">
 ![](visualization/Body_Angle_Linear_Loss_Validation_Graph.png)
 
 This graph shows the difference between tags and predictions of the validation set.
