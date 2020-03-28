@@ -1,4 +1,4 @@
-# Extracting the body & head angle of a rat out of a video frame using CNN
+# Extracting the body & head angles of a rat out of a video frame using CNN
 
 This project goal was to automatically extract the head and body angles of a rat in an arena, out of a video frame, using CNN. 
 I used two net architectures: first, resNet, custom written, second, my own custom basic model.
