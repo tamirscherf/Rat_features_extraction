@@ -9,7 +9,7 @@ I will only include here the main code files in order to presentes the main idea
 
 
 
-<img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="256" height="256" title="Github Logo">
+<img src="https://https://github.com/tamirscherf/My_Code/visualization/head_body_angles.png" width="256" height="256" title="Github Logo">
 
 
 Above is an input image with the arrows based on the outputs - head and body angles. A brain monitoring device is attached to the rats head, what makes the recognition task less trivial.
