@@ -1,6 +1,6 @@
 ## Nets Architectures
 
-Two architectures were tested, a ResNet model and a custom CNN model. The ResNet model was eventually chosen due to slightly better results.
+Two architectures were tested, a ResNet model and a custom CNN model. The ResNet model was eventually chosen due to slightly better results. Both models were trained with ADAM optimizer.
 
 ### ResNet
 The main branch of the net contains 5 sections for a net works on 50x50 images, and 6 sections for 100x100 images. The first section contains the image input layer and initial convolution layer. Afterwards there are 3 / 4 convolutional layer, with downsampling the spatial dimensions by a factor of 2. A final section with global average pooling, fully connected layer and my own implemented regression layer. There are residual connections around the convolutional units and the activation in the residual connections change size with respect to when there is downsampling between the layers.  
