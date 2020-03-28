@@ -19,7 +19,7 @@ The custom architectures that were tested contained the same initial and last se
 
 The MainNet width is 24.
 
-## Validation
+## Validation methods
 
 Each network that has been trained was validated by a few parameters.
 
