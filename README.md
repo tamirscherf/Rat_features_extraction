@@ -1,7 +1,7 @@
 # Extracting the body & head angle of a rat out of a video frame using CNN
 
 This project goal was to automatically extract the head and body angles of a rat in an arena, out of a video frame, using CNN. 
-I used two net architectures: first, resNet, custom written, second, my own custom basic model of ANN with an Convolution unit.
+I used two net architectures: first, resNet, custom written, second, my own custom basic model.
 Due to the fact that the nets output is cyclic (an angle between 0 to 359), I had to implement a new regression layer and a corresponding loss function.
 I will only include here the main code files in order to presentes the main ideas in the project. The project was written in Matlab due to the lab requirement.
 
