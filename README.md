@@ -8,7 +8,6 @@ I will only include here the main code files in order to presentes the main idea
 ![](visualization/head_body_angles.png | width=48)
 
 
-
 <img src="https://github.com/tamirscherf/My_Code/visualization/head_body_angles.png" width="128" height="128">
 
 
