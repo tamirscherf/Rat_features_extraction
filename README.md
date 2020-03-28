@@ -8,7 +8,7 @@ I will only include here the main code files in order to presentes the main idea
 ![](visualization/head_body_angles.png | width=48)
 
 
-<img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/head_body_angles.png" width="128" height="128">
+<img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/head_body_angles.png" width="256" height="256">
 
 
 Above is an input image with the arrows based on the outputs - head and body angles. A brain monitoring device is attached to the rats head, what makes the recognition task less trivial.
