@@ -7,7 +7,7 @@ The behavior of the rat in those images are grooming behaviors, as can be seen i
 
 It is not so clear what are the exact angles, even to the human eye. The yellow arrows indicate the wide range that can be relevant for the body angle.
 
-### two_net_predicte_direcs.m
+### two_nets_predicte_direcs.m
 This function receives as input images and returns the body angle for each image.
 First it will predict all images using the MainNet, a net that works on 50X50. We will smooth this angle vector with a 7 sized window.
 Afterwards it will calculate the variance over 100(VAR_CONST) elements of the first derivative of the angles vector. For every value of
