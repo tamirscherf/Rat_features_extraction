@@ -15,19 +15,18 @@ This graph shows the difference between predictions over tags of a validation se
 
 ## Folders
 
-Train_net: This folder contains the functions for training nets and validating them.
+Train_net: This folder contains the nets architectures, validation methods, the regression layer and the training function.
 
-Data_preparetion: Contains a function for augmentation of the data.
+Data_preparetion: Contains the function for augmentation of the data.
 
-Tagger: Tagging the data was necessary. I built a GUI for tagging data.
+Tagger: Tagging the data was necessary. I built a GUI for tagging data. This folder contains the tagger code with an example and further explanations.
 
-Resulets: contains the validations of the network and video results on raw data.
+Predicte: Predicting using two networks in order to minimize execution time. More information below and within the folder.
 
-Predicte: predicting using two networks. More information below.
 
-## Using two nets for Minimizing prediction running time 
+## Using two nets for Minimizing execution time 
 
-Minimizing the running time of the prediction of the net had great importance to the project. Therefore I dropped the input image size from 200X200 pixels to 100X100 and afterwards to 50X50. While net performance on most of the 50X50 images were good, for a few images of a certain behavior of the rat, the 50X50 resolution was too low causing bad results. I implemented a function that can detect those parts where the 50X50 net fails (based on the variance of the first derivative of the net output), and used a 100X100 net only for predicting those “hard” parts.
+Minimizing the running time of the prediction of the net had great importance to the project. Therefore I dropped the input image size from 200X200 pixels to 100X100 and afterwards to 50X50. While the net performances on most of the 50X50 images were good, for a few images of a certain behavior of the rat, the 50X50 resolution was too low and caused bad results. I implemented a function that can detect those parts where the 50X50 net fails (based on the variance of the first derivative of the net output), and used a 100X100 net only for predicting those “hard” parts.
 This manipulation improved the prediction running time and accuracy. 
 
 ![](visualization/Predicting_using_two_nets.png)
