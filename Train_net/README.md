@@ -50,6 +50,6 @@ Because of the cyclic output and due to the fact there were not any built in los
 function and its derivative for the regression layer. Deriving the squared distance between tags (T) and predictions (Y) required the
 subtraction function Y - T. Due to cyclicality it is not trivial and the sign of this function is case dependent.
 
-![](My_Code/visualization/Cyclic_loss_derivative_cases.png)
+<img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Cyclic_loss_derivative_cases.png">
 
 This tree shows the sepration into cases.
