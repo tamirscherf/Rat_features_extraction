@@ -5,7 +5,7 @@ I used two net architectures: first, resNet, custom written, second, my own cust
 Due to the fact that the nets output is cyclic (an angle between 0 to 359), I had to write a new regression layer and a corresponding loss function.
 I will only include here the main code files in order to presentes the main ideas in the project. The project was written in Matlab due to the lab requirement.
 
-![](visualization/head_body_angles.png)
+![](visualization/head_body_angles.png){:height="50%" width="50%"}
 
 Above is an input image with the arrows based on the outputs - head and body angles. A brain monitoring device is attached to the rats head, what makes the recognition task less trivial.
 
