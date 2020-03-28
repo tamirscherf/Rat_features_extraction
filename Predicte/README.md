@@ -5,6 +5,7 @@ The behavior of the rat in those images are grooming behaviors, as can be seen i
 ![](Grooming_behavior.png)
 
 It is not so clear what are the exact angles, even to the human eye. The yellow arrows indicate the wide range that can be relevant for the body angle.
+I implemented a function that uses two networks in order to over this problem.
 
 ### two_nets_predicte_direcs.m
 This function receives as input images and returns the body angle for each image.
