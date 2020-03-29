@@ -2,23 +2,20 @@
 
 As part of a research studying rat behavior in an arena with auditory stimuli I developed an autonomous module for feature extraction. The module automatically recognizes the head and body angles of the rat, out of a video frame, using CNN and Computer Vision tools. Those rat features are critical for understanding certain behaviors of the rat during the data analysis. 
 
-### Notes
-- Two architectures were tested:
-  - ResNet, custom written.
-  - Custom - a basic CNN model.
-- Due to the fact that the nets output is cyclic (an angle between 0 to 359), I had to implement a new regression layer and a corresponding loss function.
-- Minimizing execution time (predicting time of the net) had a great importance as this module is part of a larger data pipeline. The inference latency is 0.03 milliseconds per frame.
-
-**I will only include here the main code files in order to presentes the main ideas in the project. The project was written in Matlab due to the lab requirement.**
 
 ### The predictions, head and body angles, presented as arrows, over the input image.
 ![](visualization/head_body_angles.png)
 
-A brain monitoring device is attached to the rats head, what makes the recognition task less trivial.
+### Genral Notes
+- Seprate nets were used for the body and head angles detection.
+- Two architectures were tested:
+  - ResNet, custom written.
+  - Custom - a basic CNN model.
+- Due to the fact that the nets output is cyclic (an angle between 0 to 359), I had to implement a new regression layer and a corresponding loss function.
+- Minimizing execution time (predicting time of the net) had a great importance, as this module is part of a larger data pipeline. The inference latency is 0.03 milliseconds per frame.
 
-**This graph shows the difference between tags and predictions of the validation set.**
+**I will only include here the main code files in order to presentes the main ideas in the project. The project was written in Matlab due to the lab requirement.**
 
-![](visualization/Body_Angle_Linear_Loss_Validation_Graph.png)
 
 ## Folders
 
@@ -29,6 +26,7 @@ A brain monitoring device is attached to the rats head, what makes the recogniti
 - **Tagger:** Tagging the data was necessary. I built a GUI for tagging data. This folder contains the tagger code with an example and further explanaions.
 
 - **Predicte:** Predicting using two networks in order to minimize execution time. More information below and within the folder.
+
 ## Challenges
 
 ### Using two nets for Minimizing execution time 
@@ -40,8 +38,6 @@ This manipulation improved the prediction running time and accuracy.
 
 The next graph shows the prediction of the networks over frames out a video. In blue are the predictions of the MainNet(faster net with 50X50 input), in purple the predictions of the HardNet(slower net with 100x100 input) and in yellow their combination. The HardNet and the combination values were added 80 and 40 respectively for each prediction in order to separate between the graphs. The graph also includes the variance of the first derivative over 100 frames of the MainNet and a threshold for this parameter. This parameter indicates on frames where the MainNet performs badly on, parts where the predictions are not continuous, like in frames 3.15 to 3.25. One can notice that the HardNet performs well on those parts, and therefore the use of both give better results. Important to mention that during inference time HardNet is predicting only those hard parts and not all frames.
 
-
-
 ### Cyclic regression layer 
 
 Because of the cyclic output and due to the fact there were not any built in loss function for this output, I implement a squared loss function and its derivative for the regression layer. Deriving the squared distance between tags (T) and predictions (Y) required the subtraction function
@@ -51,6 +47,11 @@ Y - T. Due to cyclicality this function is not trivial and the sign of it is cas
 
 This tree shows the sepration into cases.
 
+## Resultes
+
+**Validation of body angle net.**
+
+![](visualization/Body_Angle_Linear_Loss_Validation_Graph.png)
 -------------------------------------------------------------------------------------------------------------
 
 
