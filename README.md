@@ -13,17 +13,17 @@ This project goal was to automatically extract the head and body angles of a rat
 
 ![](visualization/Body_Angle_Linear_Loss_Validation_Graph.png)
 
-**This graph shows the difference between tags and predictions of the validation set.
+**This graph shows the difference between tags and predictions of the validation set.**
 
 ## Folders
 
--**Train_net:** This folder contains the nets architectures, validation methods, the regression layer and the training function.
+- **Train_net:** This folder contains the nets architectures, validation methods, the regression layer and the training function.
 
--Data_preparetion: Contains the function for augmentation of the data.
+- **Data_preparetion:** Contains the function for augmentation of the data.
 
--Tagger: Tagging the data was necessary. I built a GUI for tagging data. This folder contains the tagger code with an example and further explanations.
+- **Tagger:** Tagging the data was necessary. I built a GUI for tagging data. This folder contains the tagger code with an example and further explanaions.
 
--Predicte: Predicting using two networks in order to minimize execution time. More information below and within the folder.
+- **Predicte:** Predicting using two networks in order to minimize execution time. More information below and within the folder.
 
 
 ## Using two nets for Minimizing execution time 
