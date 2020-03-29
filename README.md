@@ -7,6 +7,8 @@ As part of a research studying rat behavior in an arena with auditory stimuli I 
 ![](visualization/head_body_angles.png)
 
 ### Genral Notes
+- Tagging the data was necessary. I built a GUI for tagging data.
+- 
 - Seprate nets were used for the body and head angles detection.
 - Two architectures were tested:
   - ResNet, custom written.
@@ -24,7 +26,7 @@ As part of a research studying rat behavior in an arena with auditory stimuli I 
 
 - **Data_preparetion:** Contains the function for augmentation of the data.
 
-- **Tagger:** Tagging the data was necessary. I built a GUI for tagging data. This folder contains the tagger code with an example and further explanaions.
+- **Tagger:** This folder contains the tagger code with an example and further explanaions.
 
 - **Predicte:** Predicting using two networks in order to minimize execution time. More information below and within the folder.
 
