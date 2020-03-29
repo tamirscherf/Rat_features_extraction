@@ -1,6 +1,11 @@
 # Extracting the body & head angles of a rat out of a video frame using CNN
 
-- I used two net architectures: first, resNet, custom written, second, my own custom basic CNN model.
+As part of a research studying rat behavior in an arena with auditory stimuli I developed an autonomous module for feature extraction. The module automatically recognizes the head and body angles of the rat, out of a video frame, using CNN and Computer Vision tools. Those rat features are critical for understanding certain behaviors of the rat during the data analysis. 
+
+
+- two architectures were tested
+  - ResNet, custom written,
+  - Custom - a basic CNN model.
 - Due to the fact that the nets output is cyclic (an angle between 0 to 359), I had to implement a new regression layer and a corresponding loss function.
 - Minimizing execution time (predicting time of the net) had a great importance as this module is part of a larger data pipeline. The inference latency is 0.03 milliseconds per frame.
 
