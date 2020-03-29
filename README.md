@@ -8,7 +8,7 @@ As part of a research studying rat behavior in an arena with auditory stimuli I 
 
 ### Genral Notes
 - Tagging the data was necessary. I built a GUI for tagging data.
-- 
+- 100K size database after augmentation, frames were sampled from 16 different video, 100 frames from each.
 - Seprate nets were used for the body and head angles detection.
 - Two architectures were tested:
   - ResNet, custom written.
@@ -22,17 +22,17 @@ As part of a research studying rat behavior in an arena with auditory stimuli I 
 ## Folders
 ### Contains the code files, the methods and further details.
 
-- **Train_net:** This folder contains the nets architectures, validation methods, the regression layer and the training function.
+- **Train_net:** Contains the nets architectures, validation methods, the regression layer and the training function.
 
-- **Data_preparetion:** Contains the function for augmentation of the data.
+- **Data_preparetion:** Contains the data augmentation function and information.
 
-- **Tagger:** This folder contains the tagger code with an example and further explanaions.
+- **Tagger:** Contains the tagger code with an example and further explanaions.
 
-- **Predicte:** Predicting using two networks in order to minimize execution time. More information below and within the folder.
+- **Predicte:** Contains information and code for predicting using two networks. More information below and within the folder.
 
 ## Challenges
 
-### Using two nets for Minimizing execution time 
+### Using two nets for minimizing execution time 
 
 Minimizing the running time of the prediction of the net had great importance to the project. Therefore I dropped the input image size from 200X200 pixels to 100X100 and afterwards to 50X50. While the net performances on most of the 50X50 images were good, for a few images of a certain behavior of the rat, the 50X50 resolution was too low and caused bad results. I implemented a function that can detect those parts where the 50X50 net fails (based on the variance of the first derivative of the net output), and used a 100X100 net only for predicting those “hard” parts.
 This manipulation improved the prediction running time and accuracy. 
