@@ -28,7 +28,7 @@ As part of a research studying rat behavior in an arena with auditory stimuli I 
 
 - **Tagger:** Contains the tagger code with an example and further explanaions.
 
-- **Predicte:** Contains information and code for predicting using two networks. More information below and within the folder.
+- **Predict:** Contains information and code for predicting using two networks. More information below and within the folder.
 
 ## Challenges
 
