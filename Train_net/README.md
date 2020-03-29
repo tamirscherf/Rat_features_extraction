@@ -37,10 +37,10 @@ frame from.
 
 #### Video of un-tagged data
 a prediction of the net over 42000 frames, from a 15 second long video. Those frames are combined again for a video,
-together with an arrow visualizing the predictions of the net(see an example in file "Validation_video.mp4"). This video also gives a
+together with an arrow visualizing the predictions of the net. This video also gives a
 good validation about the net performance with frames from video that it did learn from before.  
 
-[![Video](http://img.youtube.com/vi/kqMZotVtYfY/0.jpg)](http://www.youtube.com/watch?v=kqMZotVtYfY)
+[![](http://img.youtube.com/vi/kqMZotVtYfY/0.jpg)](http://www.youtube.com/watch?v=kqMZotVtYfY)
 
 ### train_net.m
 This function trains one net or more, and allows changing desired parameters of the net.
