@@ -18,6 +18,7 @@ As part of a research studying rat behavior in an arena with auditory stimuli I 
 
 
 ## Folders
+#### Contains the code files, the methods and further details.
 
 - **Train_net:** This folder contains the nets architectures, validation methods, the regression layer and the training function.
 
