@@ -1,27 +1,29 @@
 # Extracting the body & head angles of a rat out of a video frame using CNN
 
-This project goal was to automatically extract the head and body angles of a rat in an arena, out of a video frame, using CNN. 
-I used two net architectures: first, resNet, custom written, second, my own custom basic model.
-Due to the fact that the nets output is cyclic (an angle between 0 to 359), I had to implement a new regression layer and a corresponding loss function.
-I will only include here the main code files in order to presentes the main ideas in the project. The project was written in Matlab due to the lab requirement.
+This project goal was to automatically extract the head and body angles of a rat in an arena, out of a video frame, using CNN.
+- I used two net architectures: first, resNet, custom written, second, my own custom basic model.
+- Due to the fact that the nets output is cyclic (an angle between 0 to 359), I had to implement a new regression layer and a corresponding loss function.
+- Minimizing execution time (predicting time of the net) had a great importance as this module is part of a larger pipeline. 
+
+**I will only include here the main code files in order to presentes the main ideas in the project. The project was written in Matlab due to the lab requirement.**
 
 ![](visualization/head_body_angles.png)
 
-Above is an input image with the arrows based on the outputs - head and body angles. A brain monitoring device is attached to the rats head, what makes the recognition task less trivial.
+**Above is an input image with the arrows based on the outputs - head and body angles.** A brain monitoring device is attached to the rats head, what makes the recognition task less trivial.
 
 ![](visualization/Body_Angle_Linear_Loss_Validation_Graph.png)
 
-This graph shows the difference between tags and predictions of the validation set.
+**This graph shows the difference between tags and predictions of the validation set.
 
 ## Folders
 
-Train_net: This folder contains the nets architectures, validation methods, the regression layer and the training function.
+-**Train_net:** This folder contains the nets architectures, validation methods, the regression layer and the training function.
 
-Data_preparetion: Contains the function for augmentation of the data.
+-Data_preparetion: Contains the function for augmentation of the data.
 
-Tagger: Tagging the data was necessary. I built a GUI for tagging data. This folder contains the tagger code with an example and further explanations.
+-Tagger: Tagging the data was necessary. I built a GUI for tagging data. This folder contains the tagger code with an example and further explanations.
 
-Predicte: Predicting using two networks in order to minimize execution time. More information below and within the folder.
+-Predicte: Predicting using two networks in order to minimize execution time. More information below and within the folder.
 
 
 ## Using two nets for Minimizing execution time 
