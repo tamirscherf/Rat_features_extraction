@@ -11,6 +11,7 @@ As part of a research studying rat behavior in an arena with auditory stimuli I 
 
 **I will only include here the main code files in order to presentes the main ideas in the project. The project was written in Matlab due to the lab requirement.**
 
+### The predictions, head and body angles, as arrows, over the input image.
 ![](visualization/head_body_angles.png)
 
 **Above is an input image with the arrows based on the outputs - head and body angles.** A brain monitoring device is attached to the rats head, what makes the recognition task less trivial.
