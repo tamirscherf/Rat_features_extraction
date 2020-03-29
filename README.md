@@ -16,9 +16,9 @@ As part of a research studying rat behavior in an arena with auditory stimuli I 
 
 A brain monitoring device is attached to the rats head, what makes the recognition task less trivial.
 
-![](visualization/Body_Angle_Linear_Loss_Validation_Graph.png)
-
 **This graph shows the difference between tags and predictions of the validation set.**
+
+![](visualization/Body_Angle_Linear_Loss_Validation_Graph.png)
 
 ## Folders
 
@@ -29,9 +29,9 @@ A brain monitoring device is attached to the rats head, what makes the recogniti
 - **Tagger:** Tagging the data was necessary. I built a GUI for tagging data. This folder contains the tagger code with an example and further explanaions.
 
 - **Predicte:** Predicting using two networks in order to minimize execution time. More information below and within the folder.
+## Challenges
 
-
-## Using two nets for Minimizing execution time 
+### Using two nets for Minimizing execution time 
 
 Minimizing the running time of the prediction of the net had great importance to the project. Therefore I dropped the input image size from 200X200 pixels to 100X100 and afterwards to 50X50. While the net performances on most of the 50X50 images were good, for a few images of a certain behavior of the rat, the 50X50 resolution was too low and caused bad results. I implemented a function that can detect those parts where the 50X50 net fails (based on the variance of the first derivative of the net output), and used a 100X100 net only for predicting those “hard” parts.
 This manipulation improved the prediction running time and accuracy. 
@@ -42,7 +42,7 @@ The next graph shows the prediction of the networks over frames out a video. In 
 
 
 
-## Cyclic regression layer 
+### Cyclic regression layer 
 
 Because of the cyclic output and due to the fact there were not any built in loss function for this output, I implement a squared loss function and its derivative for the regression layer. Deriving the squared distance between tags (T) and predictions (Y) required the subtraction function
 Y - T. Due to cyclicality this function is not trivial and the sign of it is case dependent.
