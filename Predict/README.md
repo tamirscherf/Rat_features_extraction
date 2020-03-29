@@ -1,11 +1,11 @@
 Please read first the “Using two nets for minimizing prediction running time” back in the main README.
-While training nets on 50X50 images I found that the nets perform badly on certain images(An example is found in the “Bad_performence” video file).
-The behavior of the rat in those images are grooming behaviors, as can be seen in the next image. 
+While training nets on 50X50 images I found that the nets perform badly on certain images. The behavior of the rat in those images are grooming behaviors. Here is a video example of an extreme bad performance of one of the nets I first trained.
+
+[![](http://img.youtube.com/vi/r0Umwu2CX-Y/0.jpg)](http://www.youtube.com/watch?v=r0Umwu2CX-Y)
+
+It is not so clear what are the exact angles, even to the human eye. The yellow arrows in the next image indicate the wide range that can be relevant for the body angle.
 
 <img src="https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Grooming_behavior.png">
-
-It is not so clear what are the exact angles, even to the human eye. The yellow arrows indicate the wide range that can be relevant for
-the body angle.
 
 I implemented a function that uses two networks in order to overcome this problem.
 
