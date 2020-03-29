@@ -12,7 +12,7 @@ As part of a research studying rat behavior in an arena with auditory stimuli I 
   - ResNet, custom written.
   - Custom - a basic CNN model.
 - Due to the fact that the nets output is cyclic (an angle between 0 to 359), I had to implement a new regression layer and a corresponding loss function.
-- Minimizing execution time (predicting time of the net) had a great importance, as this module is part of a larger data pipeline. The inference latency is 0.03 milliseconds per frame.
+- Minimizing execution time (predicting time of the net) had a great importance, as this module is part of a larger data pipeline.
 
 **I will only include here the main code files in order to presentes the main ideas in the project. The project was written in Matlab due to the lab requirement.**
 
@@ -50,13 +50,13 @@ This tree shows the sepration into cases.
 
 ## Resultes
 
-#### Validation of body angle network
+#### Validation of body angle network, less than 5° mean error.
 
 ![](visualization/Body_Angle_Linear_Loss_Validation_Graph.png)
 
 #### Video of un-tagged data
 A prediction of the body angle network over 42000 frames, from a 15 second long video. Those frames are combined again for a video,
-together with an arrow visualizing the predictions of the net. 
+together with an arrow visualizing the predictions of the net. The inference latency is 0.03 milliseconds per frame.
 
 [![](http://img.youtube.com/vi/kqMZotVtYfY/0.jpg)](http://www.youtube.com/watch?v=kqMZotVtYfY)
 
