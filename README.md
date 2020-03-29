@@ -49,9 +49,17 @@ This tree shows the sepration into cases.
 
 ## Resultes
 
-**Validation of body angle net.**
+#### Validation of body angle network
 
 ![](visualization/Body_Angle_Linear_Loss_Validation_Graph.png)
+
+#### Video of un-tagged data
+A prediction of the body angle network over 42000 frames, from a 15 second long video. Those frames are combined again for a video,
+together with an arrow visualizing the predictions of the net. 
+
+[![](http://img.youtube.com/vi/kqMZotVtYfY/0.jpg)](http://www.youtube.com/watch?v=kqMZotVtYfY)
+
+
 -------------------------------------------------------------------------------------------------------------
 
 
