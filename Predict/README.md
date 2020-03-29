@@ -1,4 +1,4 @@
-Please read first the “Using two nets for minimizing prediction running time” back in the main README.
+Please read first the “Using two nets for minimizing execution time” back in the main README.
 While training nets on 50X50 images I found that the nets perform badly on certain images. The behavior of the rat in those images are grooming behaviors. Here is a video example of an extreme bad performance of one of the nets I first trained.
 
 [![](http://img.youtube.com/vi/r0Umwu2CX-Y/0.jpg)](http://www.youtube.com/watch?v=r0Umwu2CX-Y)
