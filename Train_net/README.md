@@ -57,7 +57,7 @@ Returns the squared loss between the predictions Y and the output targets T.
 When considiring the squared distance between a prediction y and an output target t, in the cyclic range of 0 to 359, we should make sure that (t-y)^2 = (y-t)^2 
            
 
-The need in cyclic output(an angle between 0 to 359) required adjusting a regression layer. Due to the fact there were not any built in loss function for this output, I implemented a squared loss function and its derivative for the regression layer. Deriving the squared distance between target output (T) and prediction (Y) required the subtraction function
+The need in cyclic output(an angle between 0° to 359°) required adjusting a regression layer. Due to the fact there were not any built in loss function for this output, I implemented a squared loss function and its derivative for the regression layer. Deriving the squared distance between target output (T) and prediction (Y) required the subtraction function
 T - Y. Due to cyclicality this function is not trivial and the sign of it is case dependent.
 
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Cyclic_loss_derivative_cases.png">
