@@ -54,12 +54,13 @@ It contains two architectures: ResNet and Custom. It generates all the validatio
 
 #### forwardLoss function
 Returns the squared loss between the predictions Y and the output targets T.
-When considiring the squared distance between a prediction y and an output target t, in the cyclic range of 0 to 359, we should make sure that (t-y)^2 = (y-t)^2 
+When considiring the squared distance between a prediction y and an output target t, in the cyclic range of 0 to 359, we should notice that:
+If t = 45°, y = 315° we would like (t-y)^2 to be (90)^2 and not (-270)^2.
+Implementing that attribute is made in this function.
            
-
-The need in cyclic output(an angle between 0° to 359°) required adjusting a regression layer. Due to the fact there were not any built in loss function for this output, I implemented a squared loss function and its derivative for the regression layer. Deriving the squared distance between target output (T) and prediction (Y) required the subtraction function
-T - Y. Due to cyclicality this function is not trivial and the sign of it is case dependent.
+#### backwardLoss function
+Returns the derivative of the loss with respect to the predictions Y.
+The implematation of (T-Y) was needed. The absulote value of this function was implemented with forward loss function logic. The sign of (T-Y) is also case dependet and was implemented according to the following tree:
 
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Cyclic_loss_derivative_cases.png">
 
-This tree shows the sepration into cases.
