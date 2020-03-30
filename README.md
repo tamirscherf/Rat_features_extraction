@@ -10,7 +10,7 @@ As part of a research studying rat behavior in an arena with auditory stimuli I 
 ### Genral Notes
 
 - Tagging the data was necessary, therefore A GUI for tagging data was built.
-- A database ofs 100K frames after augmentation. The frames were sampled from 16 different video, 100 frames from each.
+- A database of 100K frames after augmentation. The frames were sampled from 16 different video, 100 frames from each.
 - Seprate nets were used for the body and head angles detection.
 - Two architectures were tested:
   - ResNet, custom written.
