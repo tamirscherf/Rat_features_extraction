@@ -13,7 +13,7 @@ This is a video example of an extreme bad performance of one of the nets I first
 **I implemented a function that uses two networks in order to overcome this problem.**
 
 ### two_nets_predict_direcs.m
-This function receives as input images and returns the body angle for each image.
+This function receives the input images and returns the body angle for each image.
 First it will predict all images using the MainNet, a net that works on 50X50. We will smooth this angle vector with a 7 sized window.
 Afterwards it will calculate the variance over 100(VAR_CONST) elements of the first derivative of the angles vector. For every value of
 this parameter that will be larger than the threshold(40), we will predict again those 100 frames with the HardNet, a net that works on
