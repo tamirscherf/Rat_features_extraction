@@ -3,7 +3,7 @@
 **Two architectures were tested, a ResNet model and a custom CNN model. The ResNet model was eventually chosen due to slightly better results. Both models were trained with ADAM optimizer.**
 
 ### ResNet
-The main branch of the net contains 5 sections for a net trained for 50x50 pixel input image, and 6 sections for a net trained for 100x100 pixel images(see "Predicting using two networks" section on main README for information about the input image sizes).
+The main branch of the net contains 5 sections for a net trained for 50x50 pixel input image, and 6 sections for a net trained for 100x100 pixel images(information about the differenst input image sizes on the main README).
 - The first section contains the image input layer and initial convolution layer.
 - Afterwards there are 3 / 4 convolutional layer, with downsampling the spatial dimensions by a factor of 2.
 - A final section with global average pooling, fully connected layer and my own implemented regression layer.
@@ -13,15 +13,15 @@ There are residual connections around the convolutional units and the activation
 The custom architectures that were tested contained the same initial and last sections as the ResNet, and between 6 to 10 sections of convolutional units. Each unit contains a pooling layer, convolution layer, normalization layer and activation layer, using both max and average pooling.
 
 
-#### One of the ResNet's training prograss
+#### ResNet training progress example
 
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Train_progress_ResNet.png">
 
-#### The MainNet's Architecture
+#### ResNet Architecture
 
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/MainNet_Architecture.png">
 
-**The MainNet width is 24.**
+**The net width is 24.**
 
 ## Validation methods
 
