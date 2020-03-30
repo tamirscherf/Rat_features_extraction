@@ -9,7 +9,7 @@ As part of a research studying rat behavior in an arena with auditory stimuli I 
 
 ### Genral Notes
 
-- Tagging the data was necessary. I built a GUI for tagging data.
+- Tagging the data was necessary, therefore A GUI for tagging data was built.
 - 100K size database after augmentation, frames were sampled from 16 different video, 100 frames from each.
 - Seprate nets were used for the body and head angles detection.
 - Two architectures were tested:
