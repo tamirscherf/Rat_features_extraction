@@ -51,8 +51,8 @@ This function trains one net or more nets, and allows changing desired parameter
 It contains two architectures: ResNet and Custom. It generates all the validation files for each net(graphs and video), and saves the net and the files in a unique folder.
 
 ### F_One_regression_layer.m
-The need in cyclic output(an angle between 0 to 359) required adjusting a regression layer. Due to the fact there were not any built in loss function for this output, I implemented a squared loss function and its derivative for the regression layer. Deriving the squared distance between tags (T) and predictions (Y) required the subtraction function
-Y - T. Due to cyclicality this function is not trivial and the sign of it is case dependent.
+The need in cyclic output(an angle between 0 to 359) required adjusting a regression layer. Due to the fact there were not any built in loss function for this output, I implemented a squared loss function and its derivative for the regression layer. Deriving the squared distance between target output (T) and prediction (Y) required the subtraction function
+T - Y. Due to cyclicality this function is not trivial and the sign of it is case dependent.
 
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Cyclic_loss_derivative_cases.png">
 
