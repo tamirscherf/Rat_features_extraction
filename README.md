@@ -45,8 +45,8 @@ The graph above shows the predictions of the networks over continuous frames. In
 
 ### Cyclic regression layer 
 
-The need in cyclic output(an angle between 0 to 359) required adjusting a regression layer. Due to the fact there were not any built in loss function for this output, I implemented a squared loss function and its derivative for the regression layer. Deriving the squared distance between tags (T) and predictions (Y) required the subtraction function
-Y - T. Due to cyclicality this function is not trivial and the sign of it is case dependent.
+The need in cyclic output(an angle between 0 to 359) required adjusting a regression layer. Due to the fact there were not any built in loss function for this output, I implemented a squared loss function and its derivative for the regression layer. Deriving the squared distance between target output (T) and prediction (Y) required the subtraction function
+T - Y. Due to cyclicality this function is not trivial and the sign of it is case dependent.
 
 ![](visualization/Cyclic_loss_derivative_cases.png)
 
