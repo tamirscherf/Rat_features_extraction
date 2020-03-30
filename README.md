@@ -19,8 +19,8 @@ As part of a research studying rat behavior in an arena with auditory stimuli I 
 **I will only include here the main code files in order to present the main ideas in the project. The project was written in Matlab due to the lab requirement.**
 
 
-## Folders
-### Contains the code files, the methods and further details.
+## Methods
+### The folders contains the code files, methods details and further explanations.
 
 - **Train_net:** Contains the nets architectures, validation methods, the regression layer and the training function.
 
@@ -40,6 +40,7 @@ This manipulation improved the prediction running time and accuracy.
 ![](visualization/Predicting_using_two_nets.png)
 
 The next graph shows the prediction of the networks over frames out a video. In blue are the predictions of the MainNet(faster net with 50X50 input), in purple the predictions of the HardNet(slower net with 100x100 input) and in yellow their combination. The HardNet and the combination values were added 80 and 40 respectively for each prediction in order to separate between the graphs. The graph also includes the variance of the first derivative over 100 frames of the MainNet and a threshold for this parameter. This parameter indicates on frames where the MainNet performs badly on, parts where the predictions are not continuous, like in frames 3.15 to 3.25. One can notice that the HardNet performs well on those parts, and therefore the use of both give better results. Important to mention that during inference time HardNet is predicting only those hard parts and not all frames.
+**Further details in "Predict" folder.
 
 ### Cyclic regression layer 
 
@@ -62,6 +63,7 @@ together with an arrow visualizing the predictions of the net. The inference lat
 
 [![](http://img.youtube.com/vi/kqMZotVtYfY/0.jpg)](http://www.youtube.com/watch?v=kqMZotVtYfY)
 
+**Further validation methods in "Train_net" folder.**
 
 -------------------------------------------------------------------------------------------------------------
 
