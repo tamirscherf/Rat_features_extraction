@@ -15,7 +15,7 @@ As part of a research studying rat behavior in an arena with auditory stimuli I 
 - Two architectures were tested:
   - ResNet, custom written.
   - Custom - a basic CNN model.
-- Due to the need in a cyclic output (an angle between 0 to 359), implementation of a new regression layer and a corresponding loss function was required.
+- Due to the need in a cyclic output (an angle between 0° to 359°), implementation of a new regression layer and a corresponding loss function was required.
 - Minimizing execution time (predicting time of the net) had a great importance, as this module is part of a larger data pipeline.
 
 **I will only include here the main code files in order to present the main ideas in the project. The project was written in Matlab due to the lab requirement.**
@@ -40,13 +40,13 @@ Minimizing the running time of the prediction of the net had great importance to
 
 ![](visualization/Predicting_using_two_nets.png)
 
-The graph above shows the predictions of the networks over continuous frames. In blue are the predictions of the MainNet(faster net with 50X50 input), in purple the predictions of the HardNet(slower net with 100x100 input) and in yellow their combination. The HardNet and the combination values were added 80 and 40 respectively for each prediction in order to separate between the graphs. The graph also includes the variance of the first derivative over 100 frames of the MainNet and a threshold for this parameter. This parameter indicates on frames where the MainNet performs badly on, parts where the predictions are not continuous, like in frames 3.15 to 3.25. One can notice that the HardNet performs well on those parts, and therefore the use of both give better results. Important to mention that during inference time HardNet is predicting only those hard parts and not all frames.
+The graph above shows the predictions of the networks over continuous frames. In blue are the predictions of the MainNet(faster net with 50X50 input), in purple the predictions of the HardNet(slower net with 100x100 input) and in yellow their combination. The HardNet and the combination values were added 80° and 40° respectively for each prediction in order to separate between the graphs. The graph also includes the variance of the first derivative over 100 frames of the MainNet and a threshold for this parameter. This parameter indicates on frames where the MainNet performs badly on, parts where the predictions are not continuous, like in frames 3.15 to 3.25. One can notice that the HardNet performs well on those parts, and therefore the use of both give better results. Important to mention that during inference time HardNet is predicting only those hard parts and not all frames.
 
 **Further details in "Predict" folder.**
 
 ### Cyclic regression layer 
 
-The need in cyclic output(an angle between 0 to 359) required adjusting a regression layer. Due to the fact there were not any built in loss function for this output, I implemented a squared loss function and its derivative for the regression layer. Deriving the squared distance between target output (T) and prediction (Y) required the subtraction function
+The need in cyclic output(an angle between 0° to 359°) required adjusting a regression layer. Due to the fact there were not any built in loss function for this output, I implemented a squared loss function and its derivative for the regression layer. Deriving the squared distance between target output (T) and prediction (Y) required the subtraction function
 T - Y. Due to cyclicality this function is not trivial and the sign of it is case dependent.
 
 ![](visualization/Cyclic_loss_derivative_cases.png)
