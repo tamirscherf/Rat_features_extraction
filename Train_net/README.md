@@ -28,7 +28,7 @@ The custom architectures that were tested contained the same initial and last se
 **Each network that has been trained was validated by a few parameters.**
 
 #### Validation error
-Regular validiation. A validation set sampled randomly from the DB, 20% of the DB.
+A validation set sampled randomly from the DB(20%).
 
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Body_Angle_Linear_Loss_Validation_Graph.png">
 
@@ -47,9 +47,8 @@ good validation about the net performance with frames from video that it did lea
 [![](http://img.youtube.com/vi/kqMZotVtYfY/0.jpg)](http://www.youtube.com/watch?v=kqMZotVtYfY)
 
 ### train_net.m
-This function trains one net or more, and allows changing desired parameters of the net.
-It contains two architectures: ResNet and Custom. It create all the validation for each net, graphs and video, and saves the net and
-those validations of it in a unique folder. 
+This function trains one net or more nets, and allows changing desired parameters of those nets.
+It contains two architectures: ResNet and Custom. It generates all the validation files for each net(graphs and video), and saves the net and the files in a unique folder.
 
 ### F_One_regression_layer.m
 Because of the cyclic output and due to the fact there were not any built in loss function for this output, I implement a squared loss
