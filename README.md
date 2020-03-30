@@ -13,7 +13,7 @@ As part of a research studying rat behavior in an arena with auditory stimuli I 
 - Two architectures were tested:
   - ResNet, custom written.
   - Custom - a basic CNN model.
-- Due to the fact that the nets output is cyclic (an angle between 0 to 359), I had to implement a new regression layer and a corresponding loss function.
+- Due to the need in a cyclic output (an angle between 0 to 359), implementation of a new regression layer and a corresponding loss function was required.
 - Minimizing execution time (predicting time of the net) had a great importance, as this module is part of a larger data pipeline.
 
 **I will only include here the main code files in order to present the main ideas in the project. The project was written in Matlab due to the lab requirement.**
@@ -43,8 +43,8 @@ The next graph shows the predictions of the networks over continuous frames. In 
 
 ### Cyclic regression layer 
 
-Because of the cyclic output and due to the fact there were not any built in loss function for this output, I implement a squared loss function and its derivative for the regression layer. Deriving the squared distance between tags (T) and predictions (Y) required the subtraction function
-Y - T. Due to cyclicality this function is not trivial and the sign of it is case dependent.
+The need in cyclic output(an angle between 0 to 359) required adjusting a regression layer. Due to the fact there were not any built in loss function for this output, I implemented a squared loss function and its derivative for the regression layer. Deriving the squared distance between tags (T) and predictions (Y^) required the subtraction function
+Y^ - T. Due to cyclicality this function is not trivial and the sign of it is case dependent.
 
 ![](visualization/Cyclic_loss_derivative_cases.png)
 
