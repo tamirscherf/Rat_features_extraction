@@ -3,10 +3,12 @@
 As part of a research studying rat behavior in an arena with auditory stimuli I developed an autonomous module for feature extraction. The module automatically recognizes the head and body angles of the rat, out of a video frame, using CNN and Computer Vision tools. Those rat features are critical for understanding certain behaviors of the rat during the data analysis. 
 
 
-### The predictions, head and body angles, presented as arrows, over the input image.
+### Predictions examples, head and body angles, presented as arrows, over an input image.
+
 ![](visualization/head_body_angles.png)
 
 ### Genral Notes
+
 - Tagging the data was necessary. I built a GUI for tagging data.
 - 100K size database after augmentation, frames were sampled from 16 different video, 100 frames from each.
 - Seprate nets were used for the body and head angles detection.
