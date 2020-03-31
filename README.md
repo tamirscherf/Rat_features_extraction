@@ -117,7 +117,7 @@ Implementing that attribute is made in this function.
 Returns the derivative of the loss with respect to the predictions Y.
 The implematation of (T-Y) was needed. The absulote value of this function was implemented with forward loss function logic. The sign of (T-Y) is also case dependet and was implemented according to the following tree:
 
-<img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Cyclic_loss_derivative_cases.png">
+<p align="center"><img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Cyclic_loss_derivative_cases.png" width = "400" height = "228">
 
 ### Using two nets for minimizing execution time 
 
