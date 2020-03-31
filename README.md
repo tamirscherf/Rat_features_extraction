@@ -68,10 +68,11 @@ The main branch of the net contains 5 sections for a net trained for 50x50 pixel
 - Afterwards there are 3 / 4 convolutional layers, with downsampling the spatial dimensions by a factor of 2.
 - A final section with global average pooling, fully connected layer and my own implemented regression layer.
 There are residual connections around the convolutional units and the activation in the residual connections change size with respect to when there is downsampling between the layers.
-**The net width is 24.**
+
 #### ResNet Architecture
 
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/MainNet_Architecture.png" width="500" height="300">
+**The net width is 24.**
 
 ### Custom
 The custom architectures that were tested contained the same initial and last sections as the ResNet, and between 6 to 10 sections of convolutional units. Each unit contains a pooling layer, convolution layer, normalization layer and activation layer, using both max and average pooling.
