@@ -126,8 +126,10 @@ Minimizing the running time of the prediction of the net had great importance to
 
 <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Bad_performance.gif
 " width = "300" height = "300"></p>
+
 <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Good_performance.gif
 " width = "300" height = "300"></p>
+
 The behavior of the rat in those images are grooming behaviors
 **It is not so clear what are the exact angles, even to the human eye.** The yellow arrows in the next image indicate the wide range that can be relevant for the body angle.
 
