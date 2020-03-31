@@ -12,7 +12,7 @@ The project was made at Prof. Eli Nelken's lab, the Hebrew University.
 <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Results_video.gif" width = "300" height = "300"></p>
 
 ### Table of content
- - Tagging : Tagging the data was necessary, therefore I built a GUI for tagging data.
+ - [Tagging](## Tagging) : Tagging the data was necessary, therefore I built a GUI for tagging data.
  - Data_preparation: Augmentation was made for the frames that were tagged.
  - Net architecture: Two architectures were tested:
    - ResNet, custom written.
@@ -23,6 +23,14 @@ The project was made at Prof. Eli Nelken's lab, the Hebrew University.
  - Results and validation: In order to validate the nets performnces proparly, sevral validations were made.
 
 **I will only include here the main code files in order to present the main ideas in the project. The project was written in Matlab due to the lab requirement.**
+
+
+
+
+## Tagging
+
+
+
 
 
 ## Methods
