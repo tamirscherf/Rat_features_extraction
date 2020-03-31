@@ -13,7 +13,7 @@ The project was made at Prof. Eli Nelken's lab, the Hebrew University.
 
 ### Table of content
  - [Tagging](#Tagging) : Tagging the data was necessary, therefore I built a GUI for tagging data.
- - [Data Preparation](#Data Preparation) : Augmentation was made for the frames that were tagged.
+ - [Data Preparation](#Data_Preparation) : Augmentation was made for the frames that were tagged.
  - Net architecture: Two architectures were tested:
    - ResNet, custom written.
    - Custom - a basic CNN model.
@@ -45,7 +45,7 @@ As can be seen in this example of the tagger, the frame is tagged by choosing th
 Each frame that is being tagged is shown together with 5 frames before and 5 frames after in order to help the person who is tagging make 
 the most accurate tag. For the same reason, the tagger supports changing the frame brightness.
 
-## Data Preparation
+## Data_Preparation
 
 **16 videos were sampled for the DB, 100 frames were tagged from each. Augmenting with a 64 factor gave a data set of 102400(16x100x64).**
 
