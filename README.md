@@ -20,7 +20,7 @@ The project was made at Prof. Eli Nelken's lab, the Hebrew University.**
  - [Challenges](#Challenges):
    - [Cyclic regression layer](#Cyclic-regression-layer): Due to the need in a cyclic output (an angle between 0° to 359°), implementation of a new regression layer and a corresponding loss function was required.
    - [Using two nets for minimizing execution time](#Using-two-nets-for-minimizing-execution-time): Minimizing execution time (predicting time of the net) had a great importance, as this module is part of a larger data pipeline.
- - [Results and validation](#Results-and-Validation): In order to validate the nets performnces proparly, sevral validations were made.
+ - [Results and validation](#Results-and-Validation): In order to validate the nets performances properly, several validations were made.
 
 **I will only include here the main code files in order to present the main ideas in the project. The project was written in Matlab due to the lab requirement.**
 
@@ -65,7 +65,7 @@ Noise to tag: uniformly distributed noise to the image tag in order to make up o
 ### ResNet
 The main branch of the net contains 5 sections for a net trained for 50x50 pixel input image, and 6 sections for a net trained for 100x100 pixel images(information about the differenst input image sizes on the main README).
 - The first section contains the image input layer and initial convolution layer.
-- Afterwards there are 3 / 4 convolutional layer, with downsampling the spatial dimensions by a factor of 2.
+- Afterwards there are 3 / 4 convolutional layers, with downsampling the spatial dimensions by a factor of 2.
 - A final section with global average pooling, fully connected layer and my own implemented regression layer.
 There are residual connections around the convolutional units and the activation in the residual connections change size with respect to when there is downsampling between the layers.
 **The net width is 24.**
@@ -93,8 +93,8 @@ frame from.
 <p align="center"><img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Final_test_validation_graph.png" width ="600" height = "315">
 
 #### Video of un-tagged data
-A prediction of the net over 42000 frames, from a 15 second long video. Those frames are combined again for a video,
-together with an arrow visualizing the predictions of the net. The inference latency is 0.03 milliseconds per frame.
+**A prediction of the net over 42000 frames, from a 15 seconds long video. Those frames are combined again for a video,
+together with an arrow visualizing the predictions of the net. The inference latency is 0.03 milliseconds per frame.**
 
 
 <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Results_video_1.gif" width = "300" height = "300"></p>
@@ -105,7 +105,7 @@ This video also gives a good validation about the net performance with frames fr
 
 ### Cyclic regression layer 
 
-The need in cyclic output(an angle between 0° to 359°) required adjusting a regression layer. Due to the fact there were not any built in loss function for this output, I implemented a squared loss function(forwardLoss) and its derivative(backwardLoss) for the regression layer. 
+**The need in cyclic output(an angle between 0° to 359°) required adjusting a regression layer. Due to the fact there were not any built in loss function for this output, I implemented a squared loss function(forwardLoss) and its derivative(backwardLoss) for the regression layer.**
 
 #### forwardLoss function
 Returns the squared loss between the predictions Y and the output targets T.
@@ -115,14 +115,14 @@ Implementing that attribute is made in this function.
            
 #### backwardLoss function
 Returns the derivative of the loss with respect to the predictions Y.
-The implematation of (T-Y) was needed. The absulote value of this function was implemented with forward loss function logic. The sign of (T-Y) is also case dependet and was implemented according to the following tree:
+The implementation of (T-Y) was needed. The absolute value of this function was implemented with forward loss function logic. The sign of (T-Y) is also case dependent and was implemented according to the following tree:
 
 <p align="center"><img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Cyclic_loss_derivative_cases.png" width = "400" height = "228">
 
 ### Using two nets for minimizing execution time 
-
-Minimizing the running time of the prediction of the net had great importance to the project. as this module is part of a larger data pipeline. Therefore the input images were downsampled from 200X200 pixels to 100X100 and 50X50. While the net performances on most of the 50X50 images were good, for a few images the 50X50 resolution was too low and caused bad results.  Those images were frames of a certain behavior of the rat.  Only a net trained over 100X100 input image, along with smoothing, gave satisfying results.
-#### An example of an extreme bad performance of one of the first 50x50 nets vs the good 100x100 net 
+**Most frames are predicted by a net based on 50X50 pixel input image in order to minimize execution time. This low resolution do not always give satisficing results due to certain behavior of the rat. A net based on 100X100 pixel input is used where the 50x50 fails. Recognizing those part required creative implementation**
+The input images were downsampled from 200X200 pixels to 100X100 and 50X50. While the net performances on most of the 50X50 images were good, for a few images the 50X50 resolution was too low and caused bad results.  Those images were frames of a certain behavior of the rat.  Only a net trained over 100X100 input image, along with smoothing, gave satisfying results.
+#### Bad performance of one of the first 50x50 nets VS good performance 100x100 net 
 
 <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Bad_performance.gif" width = "300" height = "300"></p>
 <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Good_performance.gif" width = "300" height = "300"></p>
@@ -131,16 +131,9 @@ Minimizing the running time of the prediction of the net had great importance to
 
 <p align="center"><img src="https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Grooming_behavior.png" width = "300" height = "300">
 
-**I implemented a function that uses two networks in order to overcome this problem.**
-In order to keep the lower execution time of the net working on 50X50 input images, for most of the frames, I implemented a function that can detect those parts where the 50X50 net fails, and used a 100X100 net only for predicting those “hard” parts. This function based on the variance of the first derivative of the 50x50 net predictions.
+#### Identifying the difficultes frames
+**Using a threshold over the variance of the first derivative of the 50x50 net predictions, I can identify the frames where the 50X50 net fails. I use the 100x100 net to predict those frames and combine the results into one vector of predictions.** 
 
 ![](visualization/Predicting_using_two_nets.png)
 
 The graph above shows the predictions of the networks over continuous frames. In blue are the predictions of the MainNet(faster net with 50X50 input), in purple the predictions of the HardNet(slower net with 100x100 input) and in yellow their combination. The HardNet and the combination values were added 80° and 40° respectively for each prediction in order to separate between the graphs. The graph also includes the variance of the first derivative over 100 frames of the MainNet and a threshold for this parameter. This parameter indicates on frames where the MainNet performs badly on, parts where the predictions are not continuous, like in frames 3.15 to 3.25. One can notice that the HardNet performs well on those parts, and therefore the use of both give better results. Important to mention that during inference time HardNet is predicting only those hard parts and not all frames.
-
-
-
-
-
-
-
