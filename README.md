@@ -39,9 +39,9 @@ From each frame the next information was extracted:
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Tagger.png">
 
 As can be seen in this example of the tagger, the frame is tagged by choosing the tail base, neck base and nose points.
-Each frame that is being tagged is shown together with 5 frames before and 5 frames after in order to help the person who is tagging make 
-the most accurate tag. For the same reason, the tagger supports changing the frame brightness.
-------------------------------------------------------------------------------------------------------------------------------
+Each frame that is being tagged is shown together with 5 frames before and 5 frames after in order to help the person who is tagging make the most accurate tag. For the same reason, the tagger supports changing the frame brightness.
+
+
 ## Data Preparation
 
 **16 videos were sampled for the DB, 100 frames were tagged from each. Augmenting with a 64 factor gave a data set of 102400(16x100x64).**
@@ -75,11 +75,11 @@ The custom architectures that were tested contained the same initial and last se
 
 #### ResNet training progress example
 
-<img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Train_progress_ResNet.png">
+<img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Train_progress_ResNet.png" width="500" height="300">
 
 #### ResNet Architecture
 
-<img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/MainNet_Architecture.png">
+<img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/MainNet_Architecture.png" width="500" height="300">
 
 **The net width is 24.**
 ------------------------------------------------------------------------------------------------------------------------------
