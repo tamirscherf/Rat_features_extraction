@@ -7,6 +7,9 @@ The project was made at Prof. Eli Nelken's lab, the Hebrew University.
 ### Predictions examples, head and body angles, presented as arrows, over an input image.
  <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/head_body_angles.png" width = "300" height = "300">
 
+### Table of content
+ - 
+
 ### General Notes
 
 - Tagging the data was necessary, therefore A GUI for tagging data was built.
