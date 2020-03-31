@@ -17,7 +17,7 @@ The project was made at Prof. Eli Nelken's lab, the Hebrew University.
  - [Nets Architectures](#Nets-Architectures): Two architectures were tested:
    - [ResNet](#ResNet), custom written.
    - [Custom](#Custom) - a basic CNN model.
- - Challenges:
+ - [Challenges](#Challenges):
    - [Cyclic regression layer](#Cyclic-regression-layer): Due to the need in a cyclic output (an angle between 0° to 359°), implementation of a new regression layer and a corresponding loss function was required.
    - [Using two nets for minimizing execution time](#Using-two-nets-for-minimizing-execution-time): Minimizing execution time (predicting time of the net) had a great importance, as this module is part of a larger data pipeline.
  - [Results and validation](#Results-and-Validation): In order to validate the nets performnces proparly, sevral validations were made.
