@@ -9,7 +9,7 @@ The project was made at Prof. Eli Nelken's lab, the Hebrew University.
 
 ### Table of content
  - 
- <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction" width = "300" height = "300"></p>
+ <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Results_video.gif" width = "300" height = "300"></p>
 
 ### General Notes
 
