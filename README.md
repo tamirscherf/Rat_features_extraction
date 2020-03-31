@@ -17,10 +17,11 @@ The project was made at Prof. Eli Nelken's lab, the Hebrew University.**
  - [Nets Architectures](#Nets-Architectures): Two architectures were tested:
    - [ResNet](#ResNet), custom written.
    - [Custom](#Custom) - a basic CNN model.
+ - [Results and validation](#Results-and-Validation): In order to validate the nets performances properly, several validations were made.
  - [Challenges](#Challenges):
    - [Cyclic regression layer](#Cyclic-regression-layer): Due to the need in a cyclic output (an angle between 0° to 359°), implementation of a new regression layer and a corresponding loss function was required.
    - [Using two nets for minimizing execution time](#Using-two-nets-for-minimizing-execution-time): Minimizing execution time (predicting time of the net) had a great importance, as this module is part of a larger data pipeline.
- - [Results and validation](#Results-and-Validation): In order to validate the nets performances properly, several validations were made.
+
 
 **I will only include here the main code files in order to present the main ideas in the project. The project was written in Matlab due to the lab requirement.**
 
@@ -122,6 +123,7 @@ The implementation of (T-Y) was needed. The absolute value of this function was 
 
 ### Using two nets for minimizing execution time 
 **Most frames are predicted by a net based on 50X50 pixel input image in order to minimize execution time. This low resolution do not always give satisficing results due to certain behavior of the rat. A net based on 100X100 pixel input is used where the 50x50 fails. Recognizing those part required creative implementation**
+
 The input images were downsampled from 200X200 pixels to 100X100 and 50X50. While the net performances on most of the 50X50 images were good, for a few images the 50X50 resolution was too low and caused bad results.  Those images were frames of a certain behavior of the rat.  Only a net trained over 100X100 input image, along with smoothing, gave satisfying results.
 #### Bad performance of one of the first 50x50 nets VS good performance 100x100 net 
 
@@ -132,7 +134,7 @@ The input images were downsampled from 200X200 pixels to 100X100 and 50X50. Whil
 
 <p align="center"><img src="https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Grooming_behavior.png" width = "300" height = "300">
 
-#### Identifying the difficultes frames
+### Identifying the difficultes frames
 **Using a threshold over the variance of the first derivative of the 50x50 net predictions, I can identify the frames where the 50X50 net fails. I use the 100x100 net to predict those frames and combine the results into one vector of predictions.** 
 
 ![](visualization/Predicting_using_two_nets.png)
