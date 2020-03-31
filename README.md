@@ -130,7 +130,7 @@ Minimizing the running time of the prediction of the net had great importance to
 The behavior of the rat in those images are grooming behaviors
 **It is not so clear what are the exact angles, even to the human eye.** The yellow arrows in the next image indicate the wide range that can be relevant for the body angle.
 
-<img src="https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Grooming_behavior.png">
+<p align="center"><img src="https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Grooming_behavior.png" width = "300" height = "300">
 
 Only a net trained over 100X100 input image gave satisfying results. In order to keep the lower execution time of the net working on 50X50 input images, for most of the frames, I implemented a function that can detect those parts where the 50X50 net fails, and used a 100X100 net only for predicting those “hard” parts. This function based on the variance of the first derivative of the 50x50 net predictions.
 
