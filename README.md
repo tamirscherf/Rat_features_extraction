@@ -1,6 +1,7 @@
 # Extracting the body & head angles of a rat out of a video frame using CNN
 
 As part of a research studying rat behavior in an arena with auditory stimuli I developed an autonomous module for feature extraction. The module automatically recognizes the head and body angles of the rat, out of a video frame, using CNN and Computer Vision tools. Those rat features are critical for understanding certain behaviors of the rat during the data analysis. 
+The project was made at Prof. Eli Nelken's lab, the Hebrew University.
 
 
 ### Predictions examples, head and body angles, presented as arrows, over an input image.
