@@ -5,8 +5,7 @@ The project was made at Prof. Eli Nelken's lab, the Hebrew University.
 
 
 ### Predictions examples, head and body angles, presented as arrows, over an input image.
- <p align="center">
-![](visualization/head_body_angles.png)
+ <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/head_body_angles.png" width = "500" height = "500">
 
 ### General Notes
 
