@@ -6,7 +6,7 @@ The project was made at Prof. Eli Nelken's lab, the Hebrew University.**
 ### Predictions examples, head and body angles, presented as arrows, over an input image.
  <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/head_body_angles.png" width = "300" height = "300">
  
-### Predicitons over continuous frames
+### Predictions over continuous frames
 <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Results_video.gif" width = "300" height = "300"></p>
 
 ### Table of content
@@ -87,7 +87,7 @@ This video also gives a good validation about the net performance with frames fr
 
 #### forwardLoss function
 Returns the squared loss between the predictions Y and the output targets T.
-When considiring the squared distance between a prediction y and an output target t, in the cyclic range of 0 to 359, we should notice that:
+When considering the squared distance between a prediction y and an output target t, in the cyclic range of 0 to 359, we should notice that:
 If t = 45°, y = 315° we would like (t-y)^2 to be (90)^2 and not (-270)^2.
 Implementing that attribute is made in this function.
            
@@ -98,7 +98,7 @@ The implementation of (T-Y) was needed. The absolute value of this function was 
 <p align="center"><img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Cyclic_loss_derivative_cases.png" width = "400" height = "228">
 
 ### Using two nets for minimizing execution time 
-**Most frames are predicted by a net based on 50X50 pixel input image in order to minimize execution time. This low resolution do not always give satisficing results due to certain behavior of the rat. A net based on 100X100 pixel input is used where the 50x50 fails. Recognizing those part required creative implementation**
+**Most frames are predicted by a net based on 50X50 pixel input image in order to minimize execution time. This low resolution does not always give satisfying results due to certain behavior of the rat. A net based on 100X100 pixel input is used where the 50x50 fails. Recognizing those part required creative implementation**
 
 The input images were downsampled from 200X200 pixels to 100X100 and 50X50. While the net performances on most of the 50X50 images were good, for a few images the 50X50 resolution was too low and caused bad results.  Those images were frames of a certain behavior of the rat.  Only a net trained over 100X100 input image, along with smoothing, gave satisfying results.
 #### Bad performance of one of the first 50x50 nets VS good performance 100x100 net 
