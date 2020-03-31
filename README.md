@@ -121,7 +121,17 @@ The implematation of (T-Y) was needed. The absulote value of this function was i
 
 ### Using two nets for minimizing execution time 
 
-Minimizing the running time of the prediction of the net had great importance to the project. Therefore the input images were downsampled from 200X200 pixels to 100X100 and 50X50. While the net performances on most of the 50X50 images were good, for a few images the 50X50 resolution was too low and caused bad results. Those images were frames of a certain behavior of the rat. Only a net trained over 100X100 input image gave satisfying results. In order to keep the lower execution time of the net working on 50X50 input images, for most of the frames, I implemented a function that can detect those parts where the 50X50 net fails, and used a 100X100 net only for predicting those “hard” parts. This function based on the variance of the first derivative of the 50x50 net predictions.
+Minimizing the running time of the prediction of the net had great importance to the project. as this module is part of a larger data pipeline. Therefore the input images were downsampled from 200X200 pixels to 100X100 and 50X50. While the net performances on most of the 50X50 images were good, for a few images the 50X50 resolution was too low and caused bad results. Those images were frames of a certain behavior of the rat. 
+#### This is a video example of an extreme bad performance of one of the nets I first trained.
+
+[![](http://img.youtube.com/vi/r0Umwu2CX-Y/0.jpg)](http://www.youtube.com/watch?v=r0Umwu2CX-Y)
+
+The behavior of the rat in those images are grooming behaviors
+**It is not so clear what are the exact angles, even to the human eye.** The yellow arrows in the next image indicate the wide range that can be relevant for the body angle.
+
+<img src="https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Grooming_behavior.png">
+
+Only a net trained over 100X100 input image gave satisfying results. In order to keep the lower execution time of the net working on 50X50 input images, for most of the frames, I implemented a function that can detect those parts where the 50X50 net fails, and used a 100X100 net only for predicting those “hard” parts. This function based on the variance of the first derivative of the 50x50 net predictions.
 
 ![](visualization/Predicting_using_two_nets.png)
 
