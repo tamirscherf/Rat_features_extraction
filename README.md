@@ -45,7 +45,7 @@ As can be seen in this example of the tagger, the frame is tagged by choosing th
 Each frame that is being tagged is shown together with 5 frames before and 5 frames after in order to help the person who is tagging make 
 the most accurate tag. For the same reason, the tagger supports changing the frame brightness.
 
-## Data_Preparation
+## Data Preparation
 
 **16 videos were sampled for the DB, 100 frames were tagged from each. Augmenting with a 64 factor gave a data set of 102400(16x100x64).**
 
