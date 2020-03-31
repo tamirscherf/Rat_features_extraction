@@ -83,7 +83,7 @@ The custom architectures that were tested contained the same initial and last se
 #### Validation error
 A validation set sampled randomly from the DB(20%).
 
-<img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Body_Angle_Linear_Loss_Validation_Graph.png">
+<p align="center"><img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Body_Angle_Linear_Loss_Validation_Graph.png" width ="600" height = "312">
 
 #### Frames from outside of the DB
 A set of 100 tagged images that is not part of the DB that the training and validation sets are taken from.
