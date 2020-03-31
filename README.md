@@ -97,7 +97,7 @@ A prediction of the net over 42000 frames, from a 15 second long video. Those fr
 together with an arrow visualizing the predictions of the net. The inference latency is 0.03 milliseconds per frame.
 
 
-<p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Results_video.gif" width = "300" height = "300"></p>
+<p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Results_video_1.gif" width = "300" height = "300"></p>
 
 This video also gives a good validation about the net performance with frames from video that it did learn from before.  
 
