@@ -80,7 +80,7 @@ The custom architectures that were tested contained the same initial and last se
 
 **Each network that has been trained was validated by a few parameters.**
 
-#### Validation error
+#### Validation error, less than 5° mean error.
 A validation set sampled randomly from the DB(20%).
 
 <p align="center"><img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Body_Angle_Linear_Loss_Validation_Graph.png" width ="600" height = "312">
@@ -90,28 +90,16 @@ A set of 100 tagged images that is not part of the DB that the training and vali
 Those 100 frames are taken from a different video in order to see how well the net performs on a video that it has never learned any
 frame from. 
 
-<img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Final_test_validation_graph.png" width ="600" height = "315">
+<p align="center"><img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Final_test_validation_graph.png" width ="600" height = "315">
 
 #### Video of un-tagged data
 A prediction of the net over 42000 frames, from a 15 second long video. Those frames are combined again for a video,
-together with an arrow visualizing the predictions of the net. This video also gives a
-good validation about the net performance with frames from video that it did learn from before.  
-
-[![](http://img.youtube.com/vi/kqMZotVtYfY/0.jpg)](http://www.youtube.com/watch?v=kqMZotVtYfY)
+together with an arrow visualizing the predictions of the net. The inference latency is 0.03 milliseconds per frame.
 
 
-## Results
+<p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Results_video.gif" width = "300" height = "300"></p>
 
-#### Validation of body angle network, less than 5° mean error.
-
-![](visualization/Body_Angle_Linear_Loss_Validation_Graph.png)
-
-#### Video of un-tagged data
-A prediction of the body angle network over 42000 frames, from a 15 second long video. Those frames are combined again for a video, with an arrow visualizing the predictions of the net. The inference latency is 0.03 milliseconds per frame.
-
-[![](http://img.youtube.com/vi/kqMZotVtYfY/0.jpg)](http://www.youtube.com/watch?v=kqMZotVtYfY)
-
-**Further validation methods in "Train_net" folder.**
+This video also gives a good validation about the net performance with frames from video that it did learn from before.  
 
 ## Challenges
 
