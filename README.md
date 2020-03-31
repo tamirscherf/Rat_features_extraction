@@ -57,7 +57,7 @@ Jitter image. X2
 Gaussian noise. X2
 
 Noise to tag: uniformly distributed noise to the image tag in order to make up on tagging inaccuracies. X2
-------------------------------------------------------------------------------------------------------------------------------
+
 ## Nets Architectures
 
 **Two architectures were tested, a ResNet model and a custom CNN model. The ResNet model was eventually chosen due to slightly better results. Both models were trained with ADAM optimizer.**
@@ -78,7 +78,7 @@ The custom architectures that were tested contained the same initial and last se
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/MainNet_Architecture.png" width="500" height="300">
 
 **The net width is 24.**
-------------------------------------------------------------------------------------------------------------------------------
+
 ## Results and Validation
 
 **Each network that has been trained was validated by a few parameters.**
@@ -115,7 +115,7 @@ A prediction of the body angle network over 42000 frames, from a 15 second long 
 [![](http://img.youtube.com/vi/kqMZotVtYfY/0.jpg)](http://www.youtube.com/watch?v=kqMZotVtYfY)
 
 **Further validation methods in "Train_net" folder.**
-------------------------------------------------------------------------------------------------------------------------------
+
 ## Challenges
 
 ### Cyclic regression layer 
@@ -167,6 +167,6 @@ use a ramp for the window- average between the first 10 (WINDOW_RAMP_SIZE) value
 
 
 
--------------------------------------------------------------------------------------------------------------
+
 
 
