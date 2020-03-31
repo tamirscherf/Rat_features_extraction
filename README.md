@@ -13,7 +13,7 @@ The project was made at Prof. Eli Nelken's lab, the Hebrew University.
 
 ### Table of content
  - [Tagging](#Tagging) : Tagging the data was necessary, therefore I built a GUI for tagging data.
- - [Data Preparation](#Data_Preparation) : Augmentation was made for the frames that were tagged.
+ - [Data Preparation](#Data Preparation) : Augmentation was made for the frames that were tagged.
  - [Nets Architectures](#Nets_Architectures): Two architectures were tested:
    - [ResNet](#ResNet), custom written.
    - [Custom](#Custom) - a basic CNN model.
