@@ -73,10 +73,6 @@ There are residual connections around the convolutional units and the activation
 The custom architectures that were tested contained the same initial and last sections as the ResNet, and between 6 to 10 sections of convolutional units. Each unit contains a pooling layer, convolution layer, normalization layer and activation layer, using both max and average pooling.
 
 
-#### ResNet training progress example
-
-<img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Train_progress_ResNet.png" width="500" height="300">
-
 #### ResNet Architecture
 
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/MainNet_Architecture.png" width="500" height="300">
