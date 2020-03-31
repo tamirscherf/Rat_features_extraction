@@ -15,12 +15,12 @@ The project was made at Prof. Eli Nelken's lab, the Hebrew University.
  - Tagging : Tagging the data was necessary, therefore I built a GUI for tagging data.
  - Data_preparation: Augmentation was made for the frames that were tagged.
  - Net architecture: Two architectures were tested:
-  - ResNet, custom written.
-  - Custom - a basic CNN model.
+   - ResNet, custom written.
+   - Custom - a basic CNN model.
  - Challenges:
-  - Implementing regrrsion layer: Due to the need in a cyclic output (an angle between 0° to 359°), implementation of a new regression layer and a corresponding loss function was required.
-  - Minimizing execution time: Minimizing execution time (predicting time of the net) had a great importance, as this module is part of a larger data pipeline.
-  - Results and validation: In order to validate the nets performnces proparly, sevral validations were made.
+   - Implementing regrrsion layer: Due to the need in a cyclic output (an angle between 0° to 359°), implementation of a new regression layer and a corresponding loss function was required.
+   - Minimizing execution time: Minimizing execution time (predicting time of the net) had a great importance, as this module is part of a larger data pipeline.
+ - Results and validation: In order to validate the nets performnces proparly, sevral validations were made.
 
 **I will only include here the main code files in order to present the main ideas in the project. The project was written in Matlab due to the lab requirement.**
 
