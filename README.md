@@ -8,6 +8,7 @@ The project was made at Prof. Eli Nelken's lab, the Hebrew University.**
  
 ### Predicitons over continuous frames
 <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Results_video.gif" width = "300" height = "300"></p>
+
 ### Table of content
  - [Tagging](#Tagging) : Tagging the data was necessary, therefore I built a GUI for tagging data.
  - [Data Preparation](#Data-Preparation) : Augmentation was made for the frames that were tagged.
@@ -19,6 +20,7 @@ The project was made at Prof. Eli Nelken's lab, the Hebrew University.**
    - [Cyclic regression layer](#Cyclic-regression-layer): Due to the need in a cyclic output (an angle between 0° to 359°), implementation of a new regression layer and a corresponding loss function was required.
    - [Using two nets for minimizing execution time](#Using-two-nets-for-minimizing-execution-time): Minimizing execution time (predicting time of the net) had a great importance, as this module is part of a larger data pipeline.
 **I will only include here the main code files in order to present the main ideas in the project. The project was written in Matlab due to the lab requirement.**
+
 ## Tagging
 **I received frames out of a video of a rat in an arena. Tagging those frames was required. I implemented a GUI using matlab tools.**
 From each frame the next information was extracted: 
@@ -26,9 +28,12 @@ From each frame the next information was extracted:
 - Body Angle, calculated as the angle between the tale base and neck base with respect to the horizontal axis.
 - Head Angle, calculated similarly with neck base and nose.
 - Hard image / Normal image, a binary tag, was taken for future use.
+
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Tagger.png">
+
 As can be seen in this example of the tagger, the frame is tagged by choosing the tail base, neck base and nose points.
 Each frame that is being tagged is shown together with 5 frames before and 5 frames after in order to help the person who is tagging make the most accurate tag. For the same reason, the tagger supports changing the frame brightness.
+
 ## Data Preparation
 **16 videos were sampled for the DB, 100 frames were tagged from each. Augmenting with a 64 factor gave a data set of 102400(16x100x64).**
 Each image was augmented with the next methods:
@@ -37,6 +42,7 @@ Vertical Flip. X2
 Jitter image. X2
 Gaussian noise. X2
 Noise to tag: uniformly distributed noise to the image tag in order to make up on tagging inaccuracies. X2
+
 ## Nets Architectures
 **Two architectures were tested, a ResNet model and a custom CNN model. The ResNet model was eventually chosen due to slightly better results. Both models were trained with ADAM optimizer.**
 ### ResNet
@@ -45,11 +51,16 @@ The main branch of the net contains 5 sections for a net trained for 50x50 pixel
 - Afterwards there are 3 / 4 convolutional layers, with downsampling the spatial dimensions by a factor of 2.
 - A final section with global average pooling, fully connected layer and my own implemented regression layer.
 There are residual connections around the convolutional units and the activation in the residual connections change size with respect to when there is downsampling between the layers.
+
 #### ResNet Architecture
+
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/MainNet_Architecture.png" width="500" height="300">
+
 **The net width is 24.**
+
 ### Custom
 The custom architectures that were tested contained the same initial and last sections as the ResNet, and between 6 to 10 sections of convolutional units. Each unit contains a pooling layer, convolution layer, normalization layer and activation layer, using both max and average pooling.
+
 ## Results and Validation
 **Each network that has been trained was validated by a few parameters.**
 #### Validation error, less than 5° mean error.
@@ -75,7 +86,6 @@ This video also gives a good validation about the net performance with frames fr
 ## Challenges
 
 ### Cyclic regression layer 
-
 **The need in cyclic output(an angle between 0° to 359°) required adjusting a regression layer. Due to the fact there were not any built in loss function for this output, I implemented a squared loss function(forwardLoss) and its derivative(backwardLoss) for the regression layer.**
 
 #### forwardLoss function
@@ -95,7 +105,6 @@ The implementation of (T-Y) was needed. The absolute value of this function was 
 
 The input images were downsampled from 200X200 pixels to 100X100 and 50X50. While the net performances on most of the 50X50 images were good, for a few images the 50X50 resolution was too low and caused bad results.  Those images were frames of a certain behavior of the rat.  Only a net trained over 100X100 input image, along with smoothing, gave satisfying results.
 #### Bad performance of one of the first 50x50 nets VS good performance 100x100 net 
-
 <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Bad_performance.gif" width = "300" height = "300"></p>
 <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Good_performance.gif" width = "300" height = "300"></p>
 
@@ -105,7 +114,6 @@ The input images were downsampled from 200X200 pixels to 100X100 and 50X50. Whil
 
 ### Identifying the difficultes frames
 **Using a threshold over the variance of the first derivative of the 50x50 net predictions, I can identify the frames where the 50X50 net fails. I use the 100x100 net to predict those frames and combine the results into one vector of predictions.** 
-
 ![](visualization/Predicting_using_two_nets.png)
 
 The graph above shows the predictions of the networks over continuous frames. In blue are the predictions of the MainNet(faster net with 50X50 input), in purple the predictions of the HardNet(slower net with 100x100 input) and in yellow their combination. The HardNet and the combination values were added 80° and 40° respectively for each prediction in order to separate between the graphs. The graph also includes the variance of the first derivative over 100 frames of the MainNet and a threshold for this parameter. This parameter indicates on frames where the MainNet performs badly on, parts where the predictions are not continuous, like in frames 3.15 to 3.25. One can notice that the HardNet performs well on those parts, and therefore the use of both give better results. Important to mention that during inference time HardNet is predicting only those hard parts and not all frames.
