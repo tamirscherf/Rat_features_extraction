@@ -46,7 +46,7 @@ Each image was augmented with the next methods:
 ## Nets Architectures
 **Two architectures were tested, a ResNet model and a custom CNN model. The ResNet model was eventually chosen due to slightly better results. Both models were trained with ADAM optimizer.**
 ### ResNet
-The main branch of the net contains 5 sections for a net trained for 50x50 pixel input image, and 6 sections for a net trained for 100x100 pixel images(information about the differenst input image sizes on the main README).
+The main branch of the net contains 5 sections for a net trained for 50x50 pixel input image, and 6 sections for a net trained for 100x100 pixel images. The net width is 24.
 - The first section contains the image input layer and initial convolution layer.
 - Afterwards there are 3 / 4 convolutional layers, with downsampling the spatial dimensions by a factor of 2.
 - A final section with global average pooling, fully connected layer and my own implemented regression layer.
@@ -56,19 +56,17 @@ There are residual connections around the convolutional units and the activation
 
 <img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/MainNet_Architecture.png" width="500" height="300">
 
-**The net width is 24.**
-
 ### Custom
 The custom architectures that were tested contained the same initial and last sections as the ResNet, and between 6 to 10 sections of convolutional units. Each unit contains a pooling layer, convolution layer, normalization layer and activation layer, using both max and average pooling.
 
 ## Results and Validation
 **Each network that has been trained was validated by a few parameters.**
 #### Validation error, less than 5° mean error.
-A validation set sampled randomly from the DB(20%).
+A validation set sampled randomly from the database(20%).
 <p align="center"><img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Body_Angle_Linear_Loss_Validation_Graph.png" width ="600" height = "312">
  
 #### Frames from outside of the database, 6.5° mean error.
-A set of 100 tagged images that is not part of the DB that the training and validation sets are taken from.
+A set of 100 tagged images that is not part of the database that the training and validation sets are taken from.
 Those 100 frames are taken from a different video in order to see how well the net performs on a video that it has never learned any
 frame from. 
 
@@ -77,7 +75,6 @@ frame from.
 #### Video of un-tagged data
 A prediction of the net over 42000 frames, from a 15 seconds long video. Those frames are combined again for a video,
 together with an arrow visualizing the predictions of the net. The inference latency is 0.03 milliseconds per frame.
-
 
 <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Results_video_1.gif" width = "300" height = "300"></p>
 
