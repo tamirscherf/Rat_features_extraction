@@ -90,7 +90,7 @@ A set of 100 tagged images that is not part of the DB that the training and vali
 Those 100 frames are taken from a different video in order to see how well the net performs on a video that it has never learned any
 frame from. 
 
-<img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Final_test_validation_graph.png">
+<img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Final_test_validation_graph.png" width ="600" height = "315">
 
 #### Video of un-tagged data
 A prediction of the net over 42000 frames, from a 15 second long video. Those frames are combined again for a video,
