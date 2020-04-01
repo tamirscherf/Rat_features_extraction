@@ -55,7 +55,7 @@ There are residual connections around the convolutional units. The activation in
 
 #### ResNet Architecture
 
- <p align="center"><img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/ResNet_skip.png" width="800" height="369">
+ <p align="center"><img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/ResNet_skip_gap.png" width="800" height="374">
 
 ### Custom
 The custom architectures that were tested contained the same initial and last sections as the ResNet, and between 6 to 10 sections of convolutional units. Each unit contains a pooling layer, convolution layer, normalization layer and activation layer, using both max and average pooling.
