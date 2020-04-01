@@ -9,7 +9,7 @@ The project was made at Prof. Eli Nelken's lab, the Hebrew University.**
 ### Predictions over continuous frames
 <p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Results_video.gif" width = "300" height = "300"></p>
 
-### Table of content
+### Table of contents
  - [Tagging](#Tagging) : Tagging the data was necessary, therefore I built a GUI for tagging data.
  - [Data Preparation](#Data-Preparation) : Augmentation was made for the frames that were tagged.
  - [Nets Architectures](#Nets-Architectures): Two architectures were tested:
