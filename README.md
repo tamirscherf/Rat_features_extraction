@@ -49,7 +49,7 @@ Each image was augmented with the next methods:
 ### ResNet
 The main branch of the net contains initial block and 5 conv blocks for a net trained for 50x50 pixel input image, and 6 for a net trained for 100x100 pixel images. The net width is 24.
 - The first initial block contains the image input layer and initial convolution layer.
-- Each conv block contains 2 convolution units with addition layers. Downsampling the spatial dimensions by a factor of 2 each 2 blocks.
+- Each conv block contains two convolution units with addition layers. Downsampling the spatial dimensions by a factor of 2, is being done each 2 blocks.
 - A final section with global average pooling, fully connected layer and my own implemented regression layer(named F1).
 There are residual connections around the convolutional units. The activation in the residual connections change size by a skip bloc,  with respect to when there is downsampling between the layers. The skip block contains conv, batch normalization layers.
 
