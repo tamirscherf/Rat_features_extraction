@@ -30,7 +30,7 @@ From each frame the next information was extracted:
 - Head Angle, calculated similarly with neck base and nose.
 - Hard image / Normal image, a binary tag, was taken for future use.
 
-<img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/Tagger.png">
+<p align="center"><img src = "https://github.com/tamirscherf/Rat_features_extraction/blob/master/visualization/Tagger_video.gif"></p>
 
 As can be seen in this example of the tagger, the frame is tagged by choosing the tail base, neck base and nose points.
 Each frame that is being tagged is shown together with 5 frames before and 5 frames after in order to help the person who is tagging make the most accurate tag. For the same reason, the tagger supports changing the frame brightness.
