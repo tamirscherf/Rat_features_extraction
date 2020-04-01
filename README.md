@@ -46,8 +46,8 @@ Each image was augmented with the next methods:
 ## Nets Architectures
 **Two architectures were tested, a ResNet model and a custom CNN model. The ResNet model was eventually chosen due to slightly better results. Both models were trained with ADAM optimizer.**
 ### ResNet
-The main branch of the net contains intial block and 5 conv blocks for a net trained for 50x50 pixel input image, and 6 for a net trained for 100x100 pixel images. The net width is 24.
-- The first intial block contains the image input layer and initial convolution layer.
+The main branch of the net contains initial block and 5 conv blocks for a net trained for 50x50 pixel input image, and 6 for a net trained for 100x100 pixel images. The net width is 24.
+- The first initial block contains the image input layer and initial convolution layer.
 - Each conv block contains 2 convolution units with addition layers. Downsampling the spatial dimensions by a factor of 2 each 2 blocks.
 - A final section with global average pooling, fully connected layer and my own implemented regression layer(named F1).
 There are residual connections around the convolutional units and the activation in the residual connections change size with respect to when there is downsampling between the layers.
