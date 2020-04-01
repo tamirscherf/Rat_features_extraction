@@ -51,11 +51,11 @@ The main branch of the net contains initial block and 5 conv blocks for a net tr
 - The first initial block contains the image input layer and initial convolution layer.
 - Each conv block contains 2 convolution units with addition layers. Downsampling the spatial dimensions by a factor of 2 each 2 blocks.
 - A final section with global average pooling, fully connected layer and my own implemented regression layer(named F1).
-There are residual connections around the convolutional units and the activation in the residual connections change size with respect to when there is downsampling between the layers.
+There are residual connections around the convolutional units. The activation in the residual connections change size by a skip bloc,  with respect to when there is downsampling between the layers. The skip block contains conv, batch normalization layers.
 
 #### ResNet Architecture
 
- <p align="center"><img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/ResNet.png" width="800" height="325">
+ <p align="center"><img src="https://github.com/tamirscherf/My_Code/blob/master/visualization/ResNet_skip.png" width="800" height="369">
 
 ### Custom
 The custom architectures that were tested contained the same initial and last sections as the ResNet, and between 6 to 10 sections of convolutional units. Each unit contains a pooling layer, convolution layer, normalization layer and activation layer, using both max and average pooling.
